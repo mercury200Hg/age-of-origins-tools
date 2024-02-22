@@ -1,0 +1,135 @@
+{% load static %}
+{% load humanize %}
+{% include "troops_calculator/includes.html" %}
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>
+        AOO Troops Calculator
+    </title>
+
+</head>
+<body>
+<script>
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-sm text-center">
+            <h1>AOO Troops Calculator</h1>
+        </div>
+    </div>
+    <div class="row">
+        <hr>
+        <div class="col-sm">
+            <form action="{% url 'troops_calculator:index' %}" method="post">
+                {% csrf_token %}
+                <fieldset>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text">Enter City level</label>
+                        </div>
+                        <input class="form-control" type="number" name="city_level" id="cl" placeholder="1"
+                               value="{{ data.city_level }}">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text">Enter max Troop Capacity(including all boosts)</label>
+                        </div>
+                        <input class="form-control" type="number" name="max_troops_capacity" id="troops_cp"
+                               value="{{ data.max_troops_capacity }}"
+                               placeholder="100000">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="event_name">Select event</label>
+                        </div>
+                        <select class="custom-select" name="event_name" id="event_name">
+                            {% for event in data.events %}
+                            {% if data.event_name == event.value %}
+                            <option name="{{ event.name }}" value="{{ event.value }}" selected>{{ event.value }}
+                            </option>
+                            {% else %}
+                            <option name="{{ event.name }}" value="{{ event.value }}">{{ event.value }}</option>
+                            {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text">Custom value</label>
+                        </div>
+                        <input class="form-control" type="number" aria-label="shredder count" name=shredder_count
+                               value={% if data.shredder_count %}"{{ data.shredder_count }}" {% else %} "1" {%endif%}" placeholder="200"/>
+                    </div>
+                    <div class="input-group-append d-flex justify-content-center">
+                        <input class="btn btn-primary" type="submit"/>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <hr>
+    {% if data.message %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <p class="text-center bg-warning"> {{ data.message }}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% if data.troops %}
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm">
+                <p class="text-center text-decoration-underline">Total troops power achieved(without zombies,titans or
+                    warplanes)
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <table class="table table-hover table-bordered">
+                <thead class="table-dark">
+                    <th scope="col" class="text-center">Battle Power</th>
+                    <th scope="col" class="text-center">Attack</th>
+                </thead>
+                <tbody>
+                    <tr scope="row">
+                        <td scope="col" class="text-center">
+                            <mark class="bg-danger text-white"><strong>{{ data.troops_total_battle_power }}</strong></mark>
+                        </td>
+                        <td scope="col" class="text-center">
+                            <mark class="bg-warning text-white"><strong>{{ data.troops_total_attack_power }}</strong></mark>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div class="row">
+            <table class="table table-hover ">
+                <thead class="table-dark">
+                <tr>
+                    <th scope="col">Troop Position(Row)</th>
+                    <th scope="col">Troop Category</th>
+                    <th scope="col">Troop Count</th>
+                    <th scope="col">Troop Total BP</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for troop in data.troops|dictsort:"row" %}
+                <tr scope="row">
+                    <td scope="col" class="table-active"><strong>{{ troop.row }}</strong></td>
+                    <td scope="col" class="table-warning"><strong>{{ troop.category }}</strong></td>
+                    <td scope="col" class="table-primary text-right"><strong>{{ troop.count|intcomma }}</strong></td>
+                    <td scope="col" class="table-danger text-right"><strong>{{ troop.battle_power|intcomma }}</strong></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+</body>
+</html>

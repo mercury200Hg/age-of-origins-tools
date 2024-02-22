@@ -1,0 +1,65 @@
+total = 184815 -> 177909
+
+
+
+mele = 17790 -> 4447 each -> 444 (shredder) + 2223 ( armed soldier) + 3433 (infantory) + 889 (tank)
+mid = 17790 -> 4447 each ->4447 (rocket) + 889 (biker) + 4447 (gunner) + 4447 (storm trooper)
+back = 147852 -> 36963 each -> 36963 (snippers) + 3696 (emp) + 7392 (cannon) + 4032 (shielder)
+
+
+16800 +
+
+
+food = 0 + 13.7
+oil = 20 + 21.4
+steel = 7 + 0.5
+minerals = 6 * 3 + 6.2
+
+
+5.98 food
+12.154 oil
+9.2 steel
+
+642,510
+128,502
+
+
+f = 59.6 + 13 = 72.6
+o = 31.3 + 21 = 51.3
+st = 9.1 + 0.4 = 9.5
+min = 2.0 + 6 = 8
+
+
+6 + 38 = 44
+3.5 + 38 = 41.5
+1.5 + 10.3 = 11.8
+0.8 + 5.5 = 6.3
+
+41.7 -> 46.7
+12 -> 17 (6.2)
+1.8 -> 6.8 (5.003)
+0.5 -> 5.5
+
+######
+prediction_price_type = 1 if upfront 2 if change_reason_pricing == "client_destination_changed" 3 else
+
+if change_reason_pricing == "client_destination_changed" && overpaid_ride_ticket == 1 {
+    customer_cheat_intent = 3 # bad
+}
+
+# range = 55 # Compute from actual csv (Max-Min) # Check
+mean_fraud_score # To calculate the actual mean # Check
+avg_deviation = mean_fraud_score/range
+customer_deviation = fraud_score/range
+
+if deviation > avg_deviation {
+    customer_cheat_intent = customer_cheat_intent + 6 # bad
+} else {
+    customer_cheat_intent = customer_cheat_intent - 2 # chances of good
+}
+
+
+""""
+25186 - c
+91158 - sn
+50 - sh

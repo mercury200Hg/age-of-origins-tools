@@ -1,0 +1,19 @@
+Name,Level,Battle Power,Load capacity,Attack,Units,Category,Minimum Building level required
+Storm Trooper,5,4,9,74,1,Storm Trooper,13
+Shielder,5,19.8,25,429,5,Shielder,13
+Armored Soldier,6,9.9,28,94,2,Armored Soldier,16
+EMP Cannon 1,6,49.5,60,1056,10,EMP Cannon,16
+Superior Storm Trooper,7,6.1,10,110,1,Storm Trooper,19
+Advanced Shielder,7,30.3,30,638,5,Shielder,19
+Heavy Armored Soldier,8,14.7,30,149,2,Armored Soldier,22
+Enhanced EMP Cannon,8,73.7,60,1540,10,EMP Cannon,22
+Havoc Storm Trooper,9,8.9,12,158,1,Storm Trooper,26
+Supreme Shielder,9,44.6,35,908,5,Shielder,26
+Ultimate Armored Soldier,10,21.3,32,233,2,Armored Soldier,30
+Supreme EMP Cannon,10,106.7,70,2112,10,EMP Cannon,30
+Havoc Dominator,11,12.8,12,216,1,Storm Trooper,35
+Light Energy shielder,11,63.8,35,1227,5,Shielder,35
+Ultima Armored Soldier,12,30.6,36,332,2,Armored Soldier,38
+Ultima EMP Cannon,12,152.9,70,2846,10,EMP Cannon,38
+Havoc Breaker,13,18.2,12,288,1,Storm Trooper,41
+Immortal Shielder,13,90.8,35,1632,5,Shielder,41

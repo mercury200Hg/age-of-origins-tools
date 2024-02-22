@@ -1,0 +1,27 @@
+Name,Level,Battle Power,Load capacity,Attack,Units,Category,Minimum Building level required
+Basic Tank,1,5,70,92,5,Tank,2
+Basic Cannon,1,5,20,173,5,Cannon,2
+Basic Shredder,2,15,100,216,10,Shredder,4
+Basic War Biker,2,7.5,35,200,5,Biker,4
+Strong Tank,3,10.5,70,130,5,Tank,7
+Strong Cannon,3,10.5,25,281,5,Cannon,7
+Strong Shredder,4,28,120,302,10,Shredder,10
+Skilled War Biker,4,14,40,297,5,Biker,10
+Intermediate Tank,5,18,75,184,5,Tank,13
+Intermediate Cannon,5,18,25,422,5,Cannon,13
+Intermediate Shredder,6,45,140,465,10,Shredder,16
+Intermediate War Biker,6,22.5,45,444,5,Biker,16
+Blaze Tank,7,27.5,75,292,5,Tank,19
+Flame Cannon,7,27.5,30,627,5,Cannon,19
+War Shredder,8,67,150,735,10,Shredder,22
+Swift Raider,8,33.5,50,651,5,Biker,22
+Death Tank,9,40.5,80,465,5,Tank,26
+Uranium Cannon,9,40.5,35,893,5,Cannon,26
+Wasteland King,10,97,160,1157,10,Shredder,30
+Storm Raider,10,48.5,60,907,5,Biker,30
+Hell Tank,11,58,80,704,5,Tank,34
+Doomsday Cannon,11,58,35,1205,5,Cannon,34
+Hell King,12,139,160,1660,10,Shredder,37
+Demon Raider,12,69.5,60,1225,5,Biker,37
+Destruction Tank,13,82.5,80,960,5,Tank,40
+Death Cannon,13,82.5,35,1600,5,Cannon,40
