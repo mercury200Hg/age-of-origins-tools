@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker  buildx build --platform linux/amd64,linux/arm64 -t  . --file Dockerfile --tag mercury200hg/age_of_origins_tools:$(date +%s)
+      run: docker  buildx build --platform linux/amd64,linux/arm64 --file Dockerfile --tag mercury200hg/age_of_origins_tools:$(date +%s)
