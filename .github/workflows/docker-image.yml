@@ -27,8 +27,11 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+    - name: Create docker image tag
+      run: echo "DOCKER_IMAGE_TOKEN=$(date +%s)" >> $GITHUB_ENV
+
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
         push: true
-        tags: mercury200hg/age_of_origins_tools:$(date +%s)
+        tags: mercury200hg/age_of_origins_tools:$DOCKER_IMAGE_TOKEN
