@@ -4,11 +4,12 @@ on:
   push:
     branches:
       - "master"
+    tags:
+      - "v*.*.*"
   pull_request:
     branches:
       - "master"
-    tags:
-      - "v*.*.*"
+
 
 jobs:
 
@@ -29,12 +30,11 @@ jobs:
         # generate Docker tags based on the following events/attributes
         tags: |
           type=schedule
-          type=ref,event=branch
+          type=sha,event=branch
           type=ref,event=pr
           type=semver,pattern={{version}}
           type=semver,pattern={{major}}.{{minor}}
           type=semver,pattern={{major}}
-          type=sha
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
@@ -47,9 +47,6 @@ jobs:
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-    - name: Create docker image tag
-      run: echo "DOCKER_IMAGE_TOKEN=$(date +%s)" >> $GITHUB_ENV
 
     - name: Build and push
       uses: docker/build-push-action@v5
