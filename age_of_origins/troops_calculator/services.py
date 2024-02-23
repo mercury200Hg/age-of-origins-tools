@@ -58,17 +58,17 @@ class ComputeTroops:
             battle_power = troop.get('battle_power')
             if str(category_name).lower() == 'cannon':
                 if cannon_min_building_lvl_required > sniper_min_building_lvl_required:
-                    troop_count = math.floor(0.8 * int(capacity_left / unit))
+                    troop_count = math.floor(0.8 * capacity_left)
                     capacity_left -= troop_count
                 else:
-                    troop_count = math.floor(0.2 * int(capacity_left / unit))
+                    troop_count = math.floor(0.2 * capacity_left)
                     capacity_left -= troop_count
             elif str(category_name).lower() == 'sniper':
                 if sniper_min_building_lvl_required > cannon_min_building_lvl_required:
-                    troop_count = math.floor(0.8 * int(capacity_left / unit))
+                    troop_count = math.floor(0.8 * capacity_left / unit)
                     capacity_left -= troop_count
                 else:
-                    troop_count = math.floor(0.2 * int(capacity_left / unit))
+                    troop_count = math.floor(0.2 * capacity_left / unit)
                     capacity_left -= troop_count
             else:
                 continue

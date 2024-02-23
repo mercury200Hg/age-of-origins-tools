@@ -1,27 +1,27 @@
 Name,Level,Battle Power,Load capacity,Attack,Units,Category,Minimum Building level required
 Basic Gunner,1,1,7,32,1,Gunner,1
-Basic Infantry,1,1,10,19,1,Infantory,1
+Basic Infantry,1,1,10,19,1,Infantry,1
 Basic Rocket Launcher,2,1.5,7,40,1,Rocket Launcher,4
 Basic Sniper,2,1.5,4,44,1,Sniper,4
 Skilled Gunner,3,2.1,8,50,1,Gunner,7
-Skilled Infantry,3,2.1,12,26,1,Infantory,7
+Skilled Infantry,3,2.1,12,26,1,Infantry,7
 Skilled Rocket Launcher,4,2.8,8,59,1,Rocket Launcher,10
 Skilled Sniper,4,2.8,5,68,1,Sniper,10
 Intermediate Gunner,5,3.6,9,73,1,Gunner,13
-Intermediate Infantry,5,3.6,13,37,1,Infantory,13
+Intermediate Infantry,5,3.6,13,37,1,Infantry,13
 Intermediate Rocket Launcher,6,4.5,9,89,1,Rocket Launcher,16
 Intermediate Sniper,6,4.5,6,104,1,Sniper,16
 Specialist Gunner,7,5.5,10,107,1,Gunner,19
-Shielded Infantry,7,5.5,15,59,1,Infantory,19
+Shielded Infantry,7,5.5,15,59,1,Infantry,19
 Blaster Rocket Launcher,8,6.7,10,130,1,Rocket Launcher,22
 Sharpshooter Sniper,8,6.7,6,151,1,Sniper,22
 Mad Gatling,9,8.1,12,154,1,Gunner,26
-Elite Infantry,9,8.1,16,93,1,Infantory,26
+Elite Infantry,9,8.1,16,93,1,Infantry,26
 Pyromaster,10,9.7,12,181,1,Rocket Launcher,30
 Cobra Sniper,10,9.7,7,208,1,Sniper,30
 Death Gatling,11,11.6,12,212,1,Gunner,33
-Titan Infantry,11,11.6,16,141,1,Infantory,33
+Titan Infantry,11,11.6,16,141,1,Infantry,33
 Fanatic Rocket Launcher,12,13.9,12,245,1,Rocket Launcher,36
 Eagle Eye Shot,12,13.9,7,279,1,Sniper,36
 Hades Gatling,13,16.5,12,283,1,Gunner,39
-Apocalypse Infantry,13,16.5,16,192,1,Infantory,39
+Apocalypse Infantry,13,16.5,16,192,1,Infantry,39
