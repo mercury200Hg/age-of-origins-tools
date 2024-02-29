@@ -39,7 +39,7 @@ env:
   AWS_REGION: eu-west-2                   # set this to your preferred AWS region, e.g. us-west-1
   ECS_SERVICE: AOO-Tools-Service                 # set this to your Amazon ECS service name
   ECS_CLUSTER: AOO                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: .aws/aoo-tools-task-definition.json # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: .github/workflows/aoo-tools-task-definition.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: age_of_origins_tools           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
